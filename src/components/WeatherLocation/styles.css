@@ -20,5 +20,11 @@
 }
 
 .locationText{
-    padding-top: 1%;
+    padding-top: 2.5%;
+    font-weight: bold;
+}
+
+.preloader-wrapper{
+    margin-top: 35px;
+    filter: drop-shadow(0 2px 5px rgba(29, 26, 21, 0.13)); 
 }

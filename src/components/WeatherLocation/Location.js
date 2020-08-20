@@ -7,7 +7,7 @@ const Location = ({city}) =>{ //Destructuring directo en la entrada de parametro
     
     return (
     <div className="locationCont">
-            <h1 className="locationText">{city}</h1>
+            <h5 className="locationText">{city}</h5>
     </div>)
 };
 

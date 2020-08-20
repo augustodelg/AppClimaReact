@@ -10,7 +10,6 @@ const api_weather = `api.openweathermap.org/data/2.5/weather?q=${api_city}&appid
 
 const WeatherData = ({data}) =>{
     const { temperatura, estadoTiempo, humedad, viento, icono } = data;
-    console.log(data);
     
     return (
     <div className='wheatherDataCont'>
