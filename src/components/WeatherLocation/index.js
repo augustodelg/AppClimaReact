@@ -7,7 +7,7 @@ import Preload from "./Desing/preload";
 
 
 //Insertar la KEY API correspondiente
-const api_key = "";
+const api_key = " ";
 const api_url = "http://api.openweathermap.org/data/2.5/weather";
 
 
