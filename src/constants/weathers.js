@@ -7,3 +7,4 @@ export const SUN = "sun";
 export const RAIN = "rain";
 
 export const WINDY = "windy";
+
