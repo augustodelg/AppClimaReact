@@ -1,20 +1,15 @@
-
-
 .App {
-
   font-weight: bold;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   border-radius: 20px;
 }
-
 
 .App-logo {
   height: 4vmin;
   pointer-events: none;
-  
 }
 
-.text-logo{
+.text-logo {
   font-family: "Fredoka One";
   font-size: 200%;
   text-align: center;
@@ -43,38 +38,23 @@
   color: #61dafb;
 }
 
-.detail{
-  background-color: rgb(53, 53, 53);
-  height: 100vh;
-  width: 100%;
-  font-size: x-large;
-  text-align: center;
-  color: aliceblue;
-  border-radius: 20px;
-  
-  
-}
+@media (max-width: 425px) {
+  .container {
+    width: 100%;
 
-@media (max-width: 425px){
-  .container{
-      width: 100%;
-
-      overflow-y: scroll;
-      margin-bottom: 20px;
-
+    overflow-y: scroll;
+    margin-bottom: 20px;
   }
   .App-logo {
     position: relative;
     height: 8vw;
     left: 7vw;
-
   }
-  .text-logo{
+  .text-logo {
     padding-bottom: 0.7vw;
     padding-left: 8vw;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -84,4 +64,3 @@
     transform: rotate(360deg);
   }
 }
-

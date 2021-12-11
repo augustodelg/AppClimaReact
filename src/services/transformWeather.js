@@ -1,4 +1,3 @@
-import { SUN } from '../constants/weathers';
 
     const getEstadoDeTiempo = weather => {
 

@@ -4,15 +4,15 @@ import Location from "./Location";
 import WeatherData from "./WeatherData";
 import transformWeather from "./../../services/transformWeather";
 import Preload from "./Desing/preload";
-
+import { api_key } from "../../constants/weathers";
 
 //Insertar la KEY API correspondiente
-const api_key = " ";
+
 const api_url = "http://api.openweathermap.org/data/2.5/weather";
 
-
 class WeatherLocation extends React.Component {
-  constructor({ city,onWeatherLocationClick }) {
+  
+  constructor({ city, onWeatherLocationClick }) {
     super();
     this.state = {
       data: null,
@@ -20,12 +20,13 @@ class WeatherLocation extends React.Component {
       onWeatherLocationClick,
     };
   }
-  componentWillMount() {
+
+  componentDidMount() {
     const { city } = this.state;
     const api_weather = `${api_url}?q=${city}&appid=${api_key}`;
     fetch(api_weather)
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         return data.json();
       })
       .then((weather_data) => {
@@ -38,23 +39,25 @@ class WeatherLocation extends React.Component {
       });
   }
 
-  
   componentDidUpdate(prevProps, prevState) {
     console.log("Post actualizado");
   }
 
   render = () => {
     console.log(this.state);
-    
-    const {onWeatherLocationClick} = this.state;
-    
-    const { city, data } = this.state;
 
+    const { onWeatherLocationClick } = this.state;
+
+    const { city, data } = this.state;
 
     return (
       <div className="wheatherLocationCont" onClick={onWeatherLocationClick}>
         <Location city={city}></Location>
-        {data ? (<WeatherData data={data}></WeatherData>) : (<Preload className="preload" />)}
+        {data ? (
+          <WeatherData data={data}></WeatherData>
+        ) : (
+          <Preload className="preload" />
+        )}
       </div>
     );
   };
